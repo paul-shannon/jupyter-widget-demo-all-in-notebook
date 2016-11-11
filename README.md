@@ -1,4 +1,4 @@
-# Some Simple Jupyter Widgets
+# A Simple Jupyter Widget: interactive d3 circle drawing, all code in the notebook
 
 Wishing to become proficient at creating interactive widgets for Jupyter notebooks and labs,
 I started out by studying the helpful documentation offered by the jupyter/ipywidgets project:
@@ -28,25 +28,14 @@ novice widget programmer to learn from:
   - pythree: 800 lines of python, 2000 lines of javascript
 
 So, with helpful advice from the jupyter-js-widget development team, I embarked upon
-an intermediate (actually, pretty simple) widget which makes very simple use of the [d3](https://d3js.org/)
-interactive graphics library, drawing circles on a small widget canvas.  I present that widget here in several 
-successive forms.  The first is a notebook with only 16 lines of python and 92 lines of javascript.   
-It demonstrates the features of widget programming I most wanted to understand as I started out: the
-logic and structure of a javascript backbonejs subclass, and the complementary python programming idioms
-needed to make it work.
+an intermediate widget, one which makes very simple use of the [d3](https://d3js.org/)
+interactive graphics library, drawing circles on a small widget canvas.  I present that widget here 
+in one notebook, self-contained: 16 lines of python and 92 lines of Javascript.  No
+auxialliary code or tools required.  
 
-The second notebook has a richer browser interface and significantly more communication between
-kernel and browser, with the goal of
+This demonstrates the features of widget programming I most wanted to understand aqhwn I started out: the
+logic and structure of a javascript backbonejs subclass, the complementary python programming idioms
+needed to make it work, how to include a public javascript library (in this case, d3).
 
-  - synchronizing state fully between the two environments
-  - offering operations (create, delete, count) equally in both enviroments, by function
-    calls in python, and interactive gestures in the browser.
-
-I present both versions of the widget in three forms:
-
- - self-contained within a single jupyter notebook, using javascript "magic"
- - as an installable notebook extension following the [jupyter widget cookiecutter](https://github.com/jupyter/widget-cookiecutter),
-   (pending)
- - with whatever modifications will be needed for it to function as a jupyter lab widget (also �pending)
-
-I welcome suggestions, and any ideas to improve the code.
+Juypter widgets are often packaged up into a notebook extensions, then downloaded and installed in a notebook
+server.  The same widget presented here is also avaialable as an extension [here](https://github.com/paul-shannon/jupyter-widget-demo-nbextension).
